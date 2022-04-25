@@ -9,7 +9,26 @@ class Manager extends Employee {
         return this.officeNumber;
     }
     generateHTML() {
-        return `<div>Manager:${this.name}</div>`
+        return `<div class="row">
+        <div class="card col-lg-4">
+            <div class="card-body">
+                <h3 class="card-title">${this.name}</h3>
+                    <p class="card-text">
+                        <ul>
+                            <li>
+                                ID: ${this.id}
+                            </li>
+                            <li>
+                                Email: ${this.email}
+                            </li>
+                            <li>
+                                Office Number: ${this.officeNumber}
+                            </li>
+                        </ul>
+                    </p>
+            </div>
+        </div>
+    </div>`
     }
 }
 

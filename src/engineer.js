@@ -9,8 +9,28 @@ class Engineer extends Employee {
         return this.github;
     }
     generateHTML() {
-        return `<div>Enginner:${this.name}</div>`
+        return `<div class="row">
+        <div class="card col-lg-4">
+            <div class="card-body">
+                <h3 class="card-title">${this.name}</h3>
+                    <p class="card-text">
+                        <ul>
+                            <li>
+                                ID: ${this.id}
+                            </li>
+                            <li>
+                                Email: ${this.email}
+                            </li>
+                            <li>
+                                Github: <a href="https://github.com/${this.github}">${this.github}</a>
+                            </li>
+                        </ul>
+                    </p>
+            </div>
+        </div>
+    </div>`
     }
 }
 
 module.exports = Engineer;
+
